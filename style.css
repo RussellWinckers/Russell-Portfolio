@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.slide{
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+.one{
+    background-color: #56b819;
+}
+.two{
+    background-color: #efdefe; 
+}
+.three{
+    background-color: #56b819;
+}
+.four{
+    background-color: #efdefe; 
+}
+
+.outer-container{
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    /* Hide scroll bar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+/* Hide scroll bar */
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Player */
+.player{
+  background-color: red;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  left: 50%;
+  z-index: 10;
+}
