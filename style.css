@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
 }
-.slide{
+.section{
     width: 100vw;
     height: 100vh;
 }
@@ -13,9 +13,24 @@ body{
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
 }
-.one{
-    background-color: #56b819;
+
+/* ////////////////////////////////////////////////////////////// LANDING */
+
+.landing{
+    background-color: #70e2ff;
 }
+
+.pier{
+    background-color: white;
+    width: 700px;
+    height: 400px;
+    left: 0;
+    bottom: 150px;
+    position: absolute;
+}
+
+
+
 .two{
     background-color: #efdefe; 
 }
@@ -49,7 +64,7 @@ body{
   position: fixed;
   width: 100px;
   height: 100px;
-  bottom: 0;
+  bottom: 150px;
   left: 50%;
   z-index: 10;
 }
