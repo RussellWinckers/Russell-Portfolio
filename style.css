@@ -2,7 +2,8 @@ body{
     margin: 0;
     padding: 0;
 }
-.section{
+.section{ 
+    position: relative;
     width: 100vw;
     height: 100vh;
 }
@@ -12,33 +13,6 @@ body{
     width: 400vw;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
-}
-
-/* ////////////////////////////////////////////////////////////// LANDING */
-
-.landing{
-    background-color: #70e2ff;
-}
-
-.pier{
-    background-color: white;
-    width: 700px;
-    height: 400px;
-    left: 0;
-    bottom: 150px;
-    position: absolute;
-}
-
-
-
-.two{
-    background-color: #efdefe; 
-}
-.three{
-    background-color: #56b819;
-}
-.four{
-    background-color: #efdefe; 
 }
 
 .outer-container{
@@ -57,7 +31,6 @@ body{
 ::-webkit-scrollbar{
     display: none;
 }
-
 /* Player */
 .player{
   background-color: red;
@@ -68,3 +41,86 @@ body{
   left: 50%;
   z-index: 10;
 }
+/* ////////////////////////////////////////////////////////////// WOLKEN */
+
+.wolk{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    z-index: 1;
+}
+.een{
+    left: 50vw;
+    top: 10vh;
+}
+.twee{
+    left: 20vw;
+    top: 5vh;
+}
+.drie{
+    left: 80vw;
+    top: 25vh;
+}
+.vier{
+    left: 10vw;
+    top: 30vh;
+}
+.vijf{
+    left: 55vw;
+    top: 35vh;
+}
+.zes{
+    left: 110vw;
+    top: 10vh;
+}
+.zeven{
+    left: 130vw;
+    top: 25vh;
+}
+.acht{
+    
+}
+
+/* ////////////////////////////////////////////////////////////// LANDING */
+
+.landing{
+    background-color: #70e2ff;
+}
+
+
+
+.grond{
+    position: absolute;
+    width: 100vw;
+    height: 150px;
+    bottom: 0;
+    background-color: rgb(235, 222, 78);
+
+}
+
+.pier{
+    background-color: white;
+    width: 700px;
+    height: 400px;
+    left: 0;
+    bottom: 150px;
+    position: absolute;
+}
+
+
+
+
+.two{
+    background-color: #efdefe; 
+}
+.three{
+    background-color: #56b819;
+}
+.four{
+    background-color: #efdefe; 
+}
+
+
+
+
