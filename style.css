@@ -3,14 +3,14 @@ body{
     padding: 0;
 }
 .layer{ 
-    position: relative;
+    position: absolute;
     width: 100vw;
     height: 100vh;
 }
 .container{
     display: flex;
     flex-direction: row;
-    width: 500vw;
+    width: 200vw;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
 }
@@ -35,11 +35,13 @@ body{
 .player{
   background-color: transparent;
   position: fixed;
-  width: 150px;
-  height: 210px;
-  bottom: 150px;
-  left: 50%;
+  width: 190px;
+  height: 250px;
+  bottom: 170px;
+  left: 45%;
   z-index: 10;
+  background-image: url(images/player.png);
+  background-size: 190px 250px;
 }
 /* ////////////////////////////////////////////////////////////// ALGEMEEN LAYER */
 
@@ -48,48 +50,56 @@ body{
     position: relative;
     left: 0;
     height: 100vh;
-    width: 500vw;
-    background-color: rgb(64, 205, 248);
+    width: 200vw;
+    background: linear-gradient(to top, rgb(156, 212, 226), rgb(72, 233, 245));
     background-repeat: no-repeat;
-}
-.layer{
-    position: absolute;
 }
 
 /* //////////////////////////////////////////////////////////////// VOORSTE LAYER */
-.voorGrond{
-    width: 100vw;
-    height: 100vh;
-}
 
-.grond{
+.voorgrond{
     position: absolute;
     width: 100vw;
-    height: 150px;
-    background-color: rgb(164, 164, 164);
+    height: 100vh;
+    z-index: 10;
+}
+.grond{
+    position: absolute;
+    width: 200vw;
+    height: 170px;
+    background-color: black;
+    background-image: url(images/wolk.png);
     bottom: 0;
 }
 
 
+/* /////////////////////////////////////////////////////////////// BACKGROUND */
 
-.l2{
-    width: 290px;
-    height: 160px;
-    background-color: green;
-    
-}
-.flat1{
+.background{
     position: absolute;
-    width: 200px;
-    height: 500px;
-    bottom: 150px;
-    left: 800px;
-    background-color: black;
-
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
 }
-
-
-
+/* Building */
+.building1{
+    position: absolute;
+    width: 1200px;
+    height: 1200px;
+    left: 300px;
+    bottom: 170px;
+    background-image: url(images/buildingShop.png);
+    background-repeat: no-repeat;
+    background-size: 1200px 1200px;
+}
+.luchtbalon{
+    position: absolute;
+    left: 1000px;
+    top: 200px;
+    width: 100px;
+    height: 200px;
+    background-color: gray;
+}
 /* ////////////////////////////////////////////////////////////// WOLKEN LAYER */
 
 
@@ -106,20 +116,10 @@ body{
 }
 .een{
     top: 200px;
-    left: 300px;
+    left: 300px; 
 }
-.twee{
-    top: 50px;
-    left: 1400px;
-}
-.drie{
-    top: 150px;
-    left: 2000px;
-}
-.vier{
-    top: 210px;
-    left: 2800px;
-}
+
+
 
 
 
