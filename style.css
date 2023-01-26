@@ -67,10 +67,21 @@ body{
     position: absolute;
     width: 200vw;
     height: 170px;
-    background-color: black;
-    background-image: url(images/wolk.png);
     bottom: 0;
 }
+.concrete{
+    height: 60px;
+    width: 200vw;
+    background-image: url(images/concretePixel.png);
+    background-size: 200px;
+}
+.dirt{
+    height: 110px;
+    width: 200vw;
+    background-image: url(images/dirtPixel.png);
+    background-size: 160px;
+}
+
 
 
 /* /////////////////////////////////////////////////////////////// BACKGROUND */
