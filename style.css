@@ -1,6 +1,8 @@
+
 body{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 .layer{ 
     position: absolute;
@@ -68,18 +70,7 @@ body{
     width: 200vw;
     height: 170px;
     bottom: 0;
-}
-.concrete{
-    height: 60px;
-    width: 200vw;
-    background-image: url(images/concretePixel.png);
-    background-size: 200px;
-}
-.dirt{
-    height: 110px;
-    width: 200vw;
-    background-image: url(images/dirtPixel.png);
-    background-size: 160px;
+    background-image: url(images/gras.png);
 }
 
 
