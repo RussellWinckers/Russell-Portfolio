@@ -96,11 +96,12 @@ body{
 }
 .luchtbalon{
     position: absolute;
-    left: 1000px;
-    top: 200px;
-    width: 100px;
-    height: 200px;
-    background-color: gray;
+    left: 2000px;
+    top: 100px;
+    width: 80px;
+    height: 136px;
+    background-image: url(images/airballoon.png);
+    background-size: 80px;
 }
 /* ////////////////////////////////////////////////////////////// WOLKEN LAYER */
 
