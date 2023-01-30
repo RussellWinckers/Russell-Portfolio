@@ -1,15 +1,20 @@
+* {
+    image-rendering: pixelated;
+}
 
-body{
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
-.layer{ 
+
+.layer {
     position: absolute;
     width: 100vw;
     height: 100vh;
 }
-.container{
+
+#container {
     display: flex;
     flex-direction: row;
     width: 200vw;
@@ -17,7 +22,7 @@ body{
     transform-origin: top left;
 }
 
-.outer-container{
+#outer-container {
     width: 100vh;
     height: 100vw;
     transform: rotate(-90deg) translateX(-100vh);
@@ -29,25 +34,55 @@ body{
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+
 /* Hide scroll bar */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
+
 /* Player */
-.player{
-  background-color: transparent;
-  position: fixed;
-  width: 190px;
-  height: 250px;
-  bottom: 170px;
-  left: 45%;
-  z-index: 10;
-  background-image: url(images/player.png);
-  background-size: 190px 250px;
+:root {
+    --pixel-size: 8;
 }
+.character{
+    position: fixed;
+    width: calc(20px * var(--pixel-size));
+    height: calc(22px * var(--pixel-size));
+    overflow: hidden;
+    z-index: 5;
+    bottom: 170px;
+    left: 40vw;
+}
+
+#character_spritesheet {
+    position: absolute;
+    /* animation: moveSpritesheet 1s steps(2) infinite; */
+    animation: none;
+    width: calc(40px * var(--pixel-size));
+}
+/* naar andere kant kijken */
+.face-right{
+    top:  calc(0 * var(--pixel-size));
+}
+.face-left{
+    top:  calc(-22px * var(--pixel-size));
+}
+
+
+@keyframes moveSpritesheet {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+
 /* ////////////////////////////////////////////////////////////// ALGEMEEN LAYER */
 
-.layers{
+.layers {
     z-index: 5;
     position: relative;
     left: 0;
@@ -59,13 +94,14 @@ body{
 
 /* //////////////////////////////////////////////////////////////// VOORSTE LAYER */
 
-.voorgrond{
+#voorgrond {
     position: absolute;
     width: 100vw;
     height: 100vh;
     z-index: 10;
 }
-.grond{
+
+.grond {
     position: absolute;
     width: 200vw;
     height: 170px;
@@ -77,14 +113,15 @@ body{
 
 /* /////////////////////////////////////////////////////////////// BACKGROUND */
 
-.background{
+.background {
     position: absolute;
     width: 100vw;
     height: 100vh;
     z-index: 5;
 }
+
 /* Building */
-.building1{
+.building1 {
     position: absolute;
     width: 1200px;
     height: 1200px;
@@ -94,35 +131,34 @@ body{
     background-repeat: no-repeat;
     background-size: 1200px 1200px;
 }
-.luchtbalon{
+
+.luchtbalon {
     position: absolute;
-    left: 2000px;
+    left: 1500px;
     top: 100px;
     width: 80px;
     height: 136px;
     background-image: url(images/airballoon.png);
     background-size: 80px;
 }
+
 /* ////////////////////////////////////////////////////////////// WOLKEN LAYER */
 
 
-.wolken{
+.wolken {
     width: 100vw;
     height: 100vh;
 }
-.wolk{
+
+.wolk {
     position: absolute;
     width: 290px;
     height: 160px;
     background-image: url(images/wolk.png);
     background-size: 290px 160px;
 }
-.een{
+
+.een {
     top: 200px;
-    left: 300px; 
+    left: 300px;
 }
-
-
-
-
-
