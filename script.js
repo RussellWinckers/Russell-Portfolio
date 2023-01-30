@@ -20,7 +20,7 @@ let countScroll = 1;
     
     document.getElementById("outer-container").onscroll = function(){
         if(countScroll = 1){
-        document.getElementById("character_spritesheet").style.animation = "moveSpritesheet 0.4s steps(2) infinite";
+        document.getElementById("character_spritesheet").style.animation = "moveSpritesheet 0.5s steps(2) infinite";
         (countScroll++);
         console.log(countScroll);
     }
@@ -28,5 +28,5 @@ let countScroll = 1;
     if(countScroll = 2){
         document.getElementById("character_spritesheet").style.animation = "none";
         (countScroll = 1);
-    }}, 800);
+    }}, 1000);
 };
