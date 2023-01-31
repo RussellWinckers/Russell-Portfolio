@@ -120,18 +120,7 @@ body {
     z-index: 5;
 }
 
-/* Building */
-.building1 {
-    position: absolute;
-    width: 1200px;
-    height: 1200px;
-    left: 300px;
-    bottom: 170px;
-    background-image: url(images/buildingShop.png);
-    background-repeat: no-repeat;
-    background-size: 1200px 1200px;
-}
-
+/* lucht balon */
 .luchtbalon {
     position: absolute;
     left: 1500px;
