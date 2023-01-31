@@ -79,6 +79,16 @@ body {
     }
 }
 
+/* movement buttons */
+#rightScroll{
+    width: 100px;
+    height: 100px;
+    top: 30vh;
+    left: 50vw;
+    position: absolute;
+    background-color: gray;
+    z-index: 20;
+}
 
 /* ////////////////////////////////////////////////////////////// ALGEMEEN LAYER */
 

@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <input type="button" name="button" id="rightScroll">
     <div class="character">
         <img id="character_spritesheet"  src="./images/animatedCharater.png" alt="Character">
     </div>
@@ -85,7 +86,16 @@
             (count = 1);
         }
     };
+    window.addEventListener("scroll", () => {
+    let scrolled = window.scroll;
+
+    console.log(scrolled);
+});
     
+let btnRight = document.getElementById("rightScroll");
+btnRight.onclick = function scrollRight(){
+   window.scroll(0, window.scrollY + 100);
+}
 </script>
 
 </html>
