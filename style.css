@@ -43,8 +43,10 @@ body {
 /* Player */
 :root {
     --pixel-size: 8;
+
 }
-.character{
+
+.character {
     position: fixed;
     width: calc(20px * var(--pixel-size));
     height: calc(22px * var(--pixel-size));
@@ -60,12 +62,14 @@ body {
     animation: none;
     width: calc(40px * var(--pixel-size));
 }
+
 /* naar andere kant kijken */
-.face-right{
-    top:  calc(0 * var(--pixel-size));
+.face-right {
+    top: calc(0 * var(--pixel-size));
 }
-.face-left{
-    top:  calc(-22px * var(--pixel-size));
+
+.face-left {
+    top: calc(-22px * var(--pixel-size));
 }
 
 
@@ -80,7 +84,7 @@ body {
 }
 
 /* movement buttons */
-#rightScroll{
+#rightScroll {
     width: 100px;
     height: 100px;
     top: 30vh;
@@ -117,6 +121,33 @@ body {
     height: 170px;
     bottom: 0;
     background-image: url(images/gras.png);
+}
+
+/* welkom screen */
+:root {
+    --name-size: 6;
+}
+
+.nameText {
+    position: absolute;
+    width: calc(131px * var(--name-size));
+    height: calc(44px * var(--name-size));
+    top: 100px;
+    left: 25vw;
+    background-image: url(images/introName.png);
+    background-repeat: no-repeat;
+    background-size: calc(131px * var(--name-size)) calc(44px * var(--name-size));
+}
+
+.welcomeText {
+    position: absolute;
+    width: calc(111px * var(--name-size));
+    height: calc(36px * var(--name-size));
+    top: 400px;
+    left: 25vw;
+    background-image: url(images/welcomeText.png);
+    background-repeat: no-repeat;
+    background-size: calc(111px * var(--name-size)) calc(36px * var(--name-size));
 }
 
 
