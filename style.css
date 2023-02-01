@@ -1,5 +1,6 @@
 * {
     image-rendering: pixelated;
+    cursor: cell;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
     height: 100vw;
     transform: rotate(-90deg) translateX(-100vh);
     transform-origin: top left;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     position: absolute;
     /* Hide scroll bar */
@@ -42,34 +43,36 @@ body {
 
 /* Player */
 :root {
-    --pixel-size: 8;
-
+    --player-size: 8;
+    --name-size: 6;
+    --portal-size: 10;
 }
 
-.character {
+#character {
     position: fixed;
-    width: calc(20px * var(--pixel-size));
-    height: calc(22px * var(--pixel-size));
+    width: calc(20px * var(--player-size));
+    height: calc(22px * var(--player-size));
     overflow: hidden;
     z-index: 5;
-    bottom: 170px;
+    bottom: 110vh;
     left: 40vw;
+    transition: 1s;
 }
 
 #character_spritesheet {
     position: absolute;
     /* animation: moveSpritesheet 1s steps(2) infinite; */
     animation: none;
-    width: calc(40px * var(--pixel-size));
+    width: calc(40px * var(--player-size));
 }
 
 /* naar andere kant kijken */
 .face-right {
-    top: calc(0 * var(--pixel-size));
+    top: calc(0 * var(--player-size));
 }
 
 .face-left {
-    top: calc(-22px * var(--pixel-size));
+    top: calc(-22px * var(--player-size));
 }
 
 
@@ -124,38 +127,58 @@ body {
 }
 
 /* welkom screen */
-:root {
-    --name-size: 6;
+#welcomeText {
+    transition: 1s;
+    position: absolute;
+    display: block;
+    width: calc(111px * var(--name-size));
+    height: calc(36px * var(--name-size));
+    top: 300px;
+    left: 23vw;
+    background-image: url(images/welcomeText.png);
+    background-repeat: no-repeat;
+    background-size: calc(111px * var(--name-size)) calc(36px * var(--name-size));
+    z-index: 7;
+}
+#welcomeText:hover{
+    cursor: pointer;
 }
 
-.nameText {
+/* Alle tekst blokken */
+#nameText {
+    transition: 1s;
     position: absolute;
     width: calc(131px * var(--name-size));
     height: calc(44px * var(--name-size));
-    top: 100px;
+    bottom: 110vh;
     left: 25vw;
     background-image: url(images/introName.png);
     background-repeat: no-repeat;
     background-size: calc(131px * var(--name-size)) calc(44px * var(--name-size));
 }
-
-.welcomeText {
+.textAbout{
     position: absolute;
-    width: calc(111px * var(--name-size));
-    height: calc(36px * var(--name-size));
-    top: 400px;
-    left: 25vw;
-    background-image: url(images/welcomeText.png);
-    background-repeat: no-repeat;
-    background-size: calc(111px * var(--name-size)) calc(36px * var(--name-size));
-}
-.test{
-    position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 100px;
+    top: 300px;
+    left: 160vw;
     background-color: gray;
-    left: 1500px;
-    top: 100px;
+    z-index: 7;
+}
+
+
+
+
+/* ///////////////////////////////////////////////////////////////// Portals */
+.portal1{
+    position: absolute;
+    width: calc(26px * var(--portal-size));
+    height: calc(40px * var(--portal-size));
+    background-image: url(images/portal.png);
+    background-size: calc(26px * var(--portal-size)) calc(40px * var(--portal-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 130vw;
 }
 
 
