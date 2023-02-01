@@ -149,7 +149,14 @@ body {
     background-repeat: no-repeat;
     background-size: calc(111px * var(--name-size)) calc(36px * var(--name-size));
 }
-
+.test{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    left: 1500px;
+    top: 100px;
+}
 
 
 /* /////////////////////////////////////////////////////////////// BACKGROUND */
