@@ -18,7 +18,7 @@ body {
 #container {
     display: flex;
     flex-direction: row;
-    width: 200vw;
+    width: var(--background-width);
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
 }
@@ -43,13 +43,17 @@ body {
 
 /* Player */
 :root {
+    --backgroundTowers-size: 7;
+    --background-width: 300vw;
     --player-size: 8;
     --name-size: 6;
+    --aboutme-size: 6;
     --portal-size: 10;
     --boom-size: 8;
     --bos-size: 5;
-    --kermis-size: 8;
     --balon-size:  5;
+    --skateLoop-size: 8;
+    --billBoard-size: 7;
 }
 
 #character {
@@ -90,17 +94,6 @@ body {
     }
 }
 
-/* movement buttons */
-#rightScroll {
-    width: 100px;
-    height: 100px;
-    top: 30vh;
-    left: 50vw;
-    position: absolute;
-    background-color: gray;
-    z-index: 20;
-}
-
 /* ////////////////////////////////////////////////////////////// ALGEMEEN LAYER */
 
 .layers {
@@ -108,7 +101,7 @@ body {
     position: relative;
     left: 0;
     height: 100vh;
-    width: 200vw;
+    width: var(--background-width);
     background: linear-gradient(to top, rgb(156, 212, 226), rgb(72, 233, 245));
     background-repeat: no-repeat;
 }
@@ -124,13 +117,13 @@ body {
 
 .grond {
     position: absolute;
-    width: 200vw;
+    width: var(--background-width);
     height: 170px;
     bottom: 0;
     background-image: url(images/gras.png);
 }
 /* ///////////////////////////////////////////////////////////////////////////////////// BOOM en BOS*/
-.boom{
+.boomGroen{
     position: absolute;
     background-image: url(images/greenTree.png);
     width: calc(30px * var(--boom-size));
@@ -140,9 +133,9 @@ body {
     background-size: calc(30px * var(--boom-size)) calc(52px * var(--boom-size));
 }
 .boomEen{
-    left: 50vw;
+    left: 65vw;
 }
-.bos{
+.bosGroen{
     position: absolute;
     background-image: url(images/greenBosje.png);
     width: calc(18px * var(--bos-size));
@@ -152,7 +145,7 @@ body {
     background-size: calc(18px * var(--bos-size)) calc(14px * var(--bos-size));
 }
 .bosEen{
-    left: 20vw;
+    left: 30vw;
 }
 
 
@@ -186,14 +179,47 @@ body {
     background-repeat: no-repeat;
     background-size: calc(131px * var(--name-size)) calc(44px * var(--name-size));
 }
+/* ////////////////////////////////////////////////////////////////////////////////////// ABOUT ME */
 .textAbout{
     position: absolute;
-    width: 300px;
-    height: 100px;
-    top: 300px;
-    left: 160vw;
-    background-color: gray;
+    width: calc(95px * var(--aboutme-size));
+    height: calc(44px * var(--aboutme-size));
+    top: 150px;
+    left: 150vw;
+    background-image: url(images/aboutMe.png);
+    background-size: calc(95px * var(--aboutme-size)) calc(44px * var(--aboutme-size));
     z-index: 7;
+}
+
+
+.skateLoop{
+    position: absolute;
+    width: calc(140px * var(--skateLoop-size));
+    height: calc(35px * var(--skateLoop-size));
+    bottom: 170px;
+    left: 205vw;
+    background-image: url(gif/skateLoop.gif);
+    background-size: calc(140px * var(--skateLoop-size)) calc(35px * var(--skateLoop-size));
+    z-index: 5;
+}
+.billBoardSkate{
+    position: absolute;
+    width: calc(51px * var(--billBoard-size));
+    height: calc(71px * var(--billBoard-size));
+    bottom: 170px;
+    left: 188vw;
+    background-image: url(images/skateBillBoard.png);
+    background-size: calc(51px * var(--billBoard-size)) calc(71px * var(--billBoard-size));
+}
+.boomPaars{
+    position: absolute;
+    background-image: url(images/purpleTree.png);
+    width: calc(30px * var(--boom-size));
+    height: calc(52px * var(--boom-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 270vw;
+    background-size: calc(30px * var(--boom-size)) calc(52px * var(--boom-size));
 }
 
 
@@ -231,17 +257,18 @@ body {
     background-image: url(images/airballoon.png);
     background-size: calc(20px * var(--balon-size)) calc(34px * var(--balon-size));
 }
-/* Kermis */
-.kermis{
+
+/* backgroundTowers */
+.towersGem {
     position: absolute;
-    width: calc(136px * var(--kermis-size));
-    height: calc(56px * var(--kermis-size));
-    background-image: url(images/kermis.png);
-    background-size: calc(136px * var(--kermis-size)) calc(56px * var(--kermis-size));
-    background-repeat: no-repeat;
+    left: 5vw;
     bottom: 170px;
-    left: 50vw;
+    width: calc(62px * var(--backgroundTowers-size));
+    height: calc(83px * var(--backgroundTowers-size));
+    background-image: url(images/gemBackground.png);
+    background-size: calc(62px * var(--backgroundTowers-size)) calc(83px * var(--backgroundTowers-size));
 }
+
 /* ////////////////////////////////////////////////////////////// WOLKEN LAYER */
 
 
@@ -260,5 +287,13 @@ body {
 
 .een {
     top: 200px;
-    left: 300px;
+    left: 30vw;
+}
+.twee{
+    top: 300px;
+    left: 90vw;
+}
+.drie{
+    top: 150px;
+    left: 130vw;
 }
