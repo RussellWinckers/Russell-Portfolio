@@ -8,7 +8,7 @@ cont.onscroll = function(){
     
     let X = cont.scrollTop;
 
-    layer[0].style.left = X/2 + "px";
+    layer[0].style.left = X/4 + "px";
     layer[1].style.left = X/1.5 + "px";
 
 
@@ -32,7 +32,7 @@ let welkom = document.getElementById("welcomeText");
 
 // Show the website on button click
 welkom.onclick = function(){
-   document.getElementById("nameText").style.bottom = "500px";
+   document.getElementById("nameText").style.bottom = "400px";
    welkom.style.display = "none";
    setTimeout(() => {
     document.getElementById("character").style.bottom = "170px";

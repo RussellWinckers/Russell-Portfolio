@@ -46,6 +46,10 @@ body {
     --player-size: 8;
     --name-size: 6;
     --portal-size: 10;
+    --boom-size: 8;
+    --bos-size: 5;
+    --kermis-size: 8;
+    --balon-size:  5;
 }
 
 #character {
@@ -125,19 +129,45 @@ body {
     bottom: 0;
     background-image: url(images/gras.png);
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// BOOM en BOS*/
+.boom{
+    position: absolute;
+    background-image: url(images/greenTree.png);
+    width: calc(30px * var(--boom-size));
+    height: calc(52px * var(--boom-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    background-size: calc(30px * var(--boom-size)) calc(52px * var(--boom-size));
+}
+.boomEen{
+    left: 50vw;
+}
+.bos{
+    position: absolute;
+    background-image: url(images/greenBosje.png);
+    width: calc(18px * var(--bos-size));
+    height: calc(14px * var(--bos-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    background-size: calc(18px * var(--bos-size)) calc(14px * var(--bos-size));
+}
+.bosEen{
+    left: 20vw;
+}
 
-/* welkom screen */
+
+/* /////////////////////////////////////////////////////////////////////////////////////// WELKOM SCREEN */
 #welcomeText {
     transition: 1s;
     position: absolute;
     display: block;
-    width: calc(111px * var(--name-size));
-    height: calc(36px * var(--name-size));
+    width: calc(145px * var(--name-size));
+    height: calc(41px * var(--name-size));
     top: 300px;
-    left: 23vw;
-    background-image: url(images/welcomeText.png);
+    left: 30vw;
+    background-image: url(gif/welcomeText.gif);
     background-repeat: no-repeat;
-    background-size: calc(111px * var(--name-size)) calc(36px * var(--name-size));
+    background-size: calc(145px * var(--name-size)) calc(41px * var(--name-size));
     z-index: 7;
 }
 #welcomeText:hover{
@@ -151,7 +181,7 @@ body {
     width: calc(131px * var(--name-size));
     height: calc(44px * var(--name-size));
     bottom: 110vh;
-    left: 25vw;
+    left: 30vw;
     background-image: url(images/introName.png);
     background-repeat: no-repeat;
     background-size: calc(131px * var(--name-size)) calc(44px * var(--name-size));
@@ -196,12 +226,22 @@ body {
     position: absolute;
     left: 1500px;
     top: 100px;
-    width: 80px;
-    height: 136px;
+    width: calc(20px * var(--balon-size));
+    height: calc(34px * var(--balon-size));
     background-image: url(images/airballoon.png);
-    background-size: 80px;
+    background-size: calc(20px * var(--balon-size)) calc(34px * var(--balon-size));
 }
-
+/* Kermis */
+.kermis{
+    position: absolute;
+    width: calc(136px * var(--kermis-size));
+    height: calc(56px * var(--kermis-size));
+    background-image: url(images/kermis.png);
+    background-size: calc(136px * var(--kermis-size)) calc(56px * var(--kermis-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 50vw;
+}
 /* ////////////////////////////////////////////////////////////// WOLKEN LAYER */
 
 
