@@ -44,7 +44,7 @@ body {
 /* Player */
 :root {
     --backgroundTowers-size: 7;
-    --background-width: 300vw;
+    --background-width: 400vw;
     --player-size: 8;
     --name-size: 6;
     --aboutme-size: 6;
@@ -190,14 +190,23 @@ body {
     background-size: calc(95px * var(--aboutme-size)) calc(44px * var(--aboutme-size));
     z-index: 7;
 }
-
+.boomPaars{
+    position: absolute;
+    background-image: url(images/purpleTree.png);
+    width: calc(30px * var(--boom-size));
+    height: calc(52px * var(--boom-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 166vw;
+    background-size: calc(30px * var(--boom-size)) calc(52px * var(--boom-size)); 
+}
 
 .skateLoop{
     position: absolute;
     width: calc(140px * var(--skateLoop-size));
     height: calc(35px * var(--skateLoop-size));
     bottom: 170px;
-    left: 205vw;
+    left: 210vw;
     background-image: url(gif/skateLoop.gif);
     background-size: calc(140px * var(--skateLoop-size)) calc(35px * var(--skateLoop-size));
     z-index: 5;
@@ -207,19 +216,27 @@ body {
     width: calc(51px * var(--billBoard-size));
     height: calc(71px * var(--billBoard-size));
     bottom: 170px;
-    left: 188vw;
+    left: 195vw;
     background-image: url(images/skateBillBoard.png);
     background-size: calc(51px * var(--billBoard-size)) calc(71px * var(--billBoard-size));
 }
-.boomPaars{
+.purpleTower{
     position: absolute;
-    background-image: url(images/purpleTree.png);
-    width: calc(30px * var(--boom-size));
-    height: calc(52px * var(--boom-size));
-    background-repeat: no-repeat;
+    width: 200px;
+    height: 800px;
     bottom: 170px;
-    left: 270vw;
-    background-size: calc(30px * var(--boom-size)) calc(52px * var(--boom-size));
+    background-color: gray;
+    left: 280vw;
+
+}
+/* ///////////// GLR */
+.GLR{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    bottom: 170px;
+    left: 320vw;
+    background-color: rgb(255, 230, 8);
 }
 
 
