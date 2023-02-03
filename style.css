@@ -1,0 +1,299 @@
+* {
+    image-rendering: pixelated;
+    cursor: cell;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    width: var(--background-width);
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+#outer-container {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: absolute;
+    /* Hide scroll bar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Hide scroll bar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Player */
+:root {
+    --backgroundTowers-size: 7;
+    --background-width: 300vw;
+    --player-size: 8;
+    --name-size: 6;
+    --aboutme-size: 6;
+    --portal-size: 10;
+    --boom-size: 8;
+    --bos-size: 5;
+    --balon-size:  5;
+    --skateLoop-size: 8;
+    --billBoard-size: 7;
+}
+
+#character {
+    position: fixed;
+    width: calc(20px * var(--player-size));
+    height: calc(22px * var(--player-size));
+    overflow: hidden;
+    z-index: 5;
+    bottom: 110vh;
+    left: 40vw;
+    transition: 1s;
+}
+
+#character_spritesheet {
+    position: absolute;
+    /* animation: moveSpritesheet 1s steps(2) infinite; */
+    animation: none;
+    width: calc(40px * var(--player-size));
+}
+
+/* naar andere kant kijken */
+.face-right {
+    top: calc(0 * var(--player-size));
+}
+
+.face-left {
+    top: calc(-22px * var(--player-size));
+}
+
+
+@keyframes moveSpritesheet {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+/* ////////////////////////////////////////////////////////////// ALGEMEEN LAYER */
+
+.layers {
+    z-index: 5;
+    position: relative;
+    left: 0;
+    height: 100vh;
+    width: var(--background-width);
+    background: linear-gradient(to top, rgb(156, 212, 226), rgb(72, 233, 245));
+    background-repeat: no-repeat;
+}
+
+/* //////////////////////////////////////////////////////////////// VOORSTE LAYER */
+
+#voorgrond {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.grond {
+    position: absolute;
+    width: var(--background-width);
+    height: 170px;
+    bottom: 0;
+    background-image: url(images/gras.png);
+}
+/* ///////////////////////////////////////////////////////////////////////////////////// BOOM en BOS*/
+.boomGroen{
+    position: absolute;
+    background-image: url(images/greenTree.png);
+    width: calc(30px * var(--boom-size));
+    height: calc(52px * var(--boom-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    background-size: calc(30px * var(--boom-size)) calc(52px * var(--boom-size));
+}
+.boomEen{
+    left: 65vw;
+}
+.bosGroen{
+    position: absolute;
+    background-image: url(images/greenBosje.png);
+    width: calc(18px * var(--bos-size));
+    height: calc(14px * var(--bos-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    background-size: calc(18px * var(--bos-size)) calc(14px * var(--bos-size));
+}
+.bosEen{
+    left: 30vw;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////// WELKOM SCREEN */
+#welcomeText {
+    transition: 1s;
+    position: absolute;
+    display: block;
+    width: calc(145px * var(--name-size));
+    height: calc(41px * var(--name-size));
+    top: 300px;
+    left: 30vw;
+    background-image: url(gif/welcomeText.gif);
+    background-repeat: no-repeat;
+    background-size: calc(145px * var(--name-size)) calc(41px * var(--name-size));
+    z-index: 7;
+}
+#welcomeText:hover{
+    cursor: pointer;
+}
+
+/* Alle tekst blokken */
+#nameText {
+    transition: 1s;
+    position: absolute;
+    width: calc(131px * var(--name-size));
+    height: calc(44px * var(--name-size));
+    bottom: 110vh;
+    left: 30vw;
+    background-image: url(images/introName.png);
+    background-repeat: no-repeat;
+    background-size: calc(131px * var(--name-size)) calc(44px * var(--name-size));
+}
+/* ////////////////////////////////////////////////////////////////////////////////////// ABOUT ME */
+.textAbout{
+    position: absolute;
+    width: calc(95px * var(--aboutme-size));
+    height: calc(44px * var(--aboutme-size));
+    top: 150px;
+    left: 150vw;
+    background-image: url(images/aboutMe.png);
+    background-size: calc(95px * var(--aboutme-size)) calc(44px * var(--aboutme-size));
+    z-index: 7;
+}
+
+
+.skateLoop{
+    position: absolute;
+    width: calc(140px * var(--skateLoop-size));
+    height: calc(35px * var(--skateLoop-size));
+    bottom: 170px;
+    left: 205vw;
+    background-image: url(gif/skateLoop.gif);
+    background-size: calc(140px * var(--skateLoop-size)) calc(35px * var(--skateLoop-size));
+    z-index: 5;
+}
+.billBoardSkate{
+    position: absolute;
+    width: calc(51px * var(--billBoard-size));
+    height: calc(71px * var(--billBoard-size));
+    bottom: 170px;
+    left: 188vw;
+    background-image: url(images/skateBillBoard.png);
+    background-size: calc(51px * var(--billBoard-size)) calc(71px * var(--billBoard-size));
+}
+.boomPaars{
+    position: absolute;
+    background-image: url(images/purpleTree.png);
+    width: calc(30px * var(--boom-size));
+    height: calc(52px * var(--boom-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 270vw;
+    background-size: calc(30px * var(--boom-size)) calc(52px * var(--boom-size));
+}
+
+
+
+
+/* ///////////////////////////////////////////////////////////////// Portals */
+.portal1{
+    position: absolute;
+    width: calc(26px * var(--portal-size));
+    height: calc(40px * var(--portal-size));
+    background-image: url(images/portal.png);
+    background-size: calc(26px * var(--portal-size)) calc(40px * var(--portal-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 130vw;
+}
+
+
+/* /////////////////////////////////////////////////////////////// BACKGROUND */
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+}
+
+/* lucht balon */
+.luchtbalon {
+    position: absolute;
+    left: 1500px;
+    top: 100px;
+    width: calc(20px * var(--balon-size));
+    height: calc(34px * var(--balon-size));
+    background-image: url(images/airballoon.png);
+    background-size: calc(20px * var(--balon-size)) calc(34px * var(--balon-size));
+}
+
+/* backgroundTowers */
+.towersGem {
+    position: absolute;
+    left: 5vw;
+    bottom: 170px;
+    width: calc(62px * var(--backgroundTowers-size));
+    height: calc(83px * var(--backgroundTowers-size));
+    background-image: url(images/gemBackground.png);
+    background-size: calc(62px * var(--backgroundTowers-size)) calc(83px * var(--backgroundTowers-size));
+}
+
+/* ////////////////////////////////////////////////////////////// WOLKEN LAYER */
+
+
+.wolken {
+    width: 100vw;
+    height: 100vh;
+}
+
+.wolk {
+    position: absolute;
+    width: 290px;
+    height: 160px;
+    background-image: url(images/wolk.png);
+    background-size: 290px 160px;
+}
+
+.een {
+    top: 200px;
+    left: 30vw;
+}
+.twee{
+    top: 300px;
+    left: 90vw;
+}
+.drie{
+    top: 150px;
+    left: 130vw;
+}
