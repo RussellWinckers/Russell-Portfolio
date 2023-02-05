@@ -1,6 +1,5 @@
 * {
     image-rendering: pixelated;
-    cursor: cell;
 }
 
 body {
@@ -43,11 +42,11 @@ body {
 
 /* Player */
 :root {
-    --factory-size: 10;
+    
     --backgroundTowers-size: 7;
     --purpleTower-size: 0;
     --mountain-size: 9;
-    --background-width: 900vw;
+    --background-width: 1200vw;
     --player-size: 8;
     --name-size: 6;
     --aboutme-size: 6;
@@ -65,7 +64,13 @@ body {
     --skills-size: 6;
     --woodenSign2-size: 8;
     --talenLijst-size: 8;
+    --palmTree-size: 9; 
+    --truck-size: 15;
+    --factory-size: 10;
     
+
+    /* Projects */
+    --projectSign-size: 7;
 }
 
 #character {
@@ -129,7 +134,7 @@ body {
 
 .grond1 {
     position: absolute;
-    width: 135vw;
+    width: 137vw;
     height: 170px;
     bottom: 0;
     background-image: url(images/gras.png);
@@ -139,16 +144,24 @@ body {
     width: 290vw;
     height: 170px;
     bottom: 0;
-    left: 135vw;
+    left: 137vw;
     background-image: url(images/purpleGras.png);
 }
 .grond3{
     position: absolute;
-    width: 400vw;
+    width: 350vw;
     height: 170px;
     bottom: 0;
-    left: 425vw;
+    left: 427vw;
     background-image: url(images/streetGround.png);
+}
+.grond4{
+    position: absolute;
+    width: 350vw;
+    height: 170px;
+    bottom: 0;
+    left: 777vw;
+    background-image: url(images/iceGrond.png);
 }
 /* ///////////////////////////////////////////////////////////////////////////////////// BOOM en BOS*/
 .boomGroen{
@@ -341,10 +354,93 @@ body {
     width: calc(91px * var(--talenLijst-size));
     height: calc(40px * var(--talenLijst-size));
     bottom: 300px;
-    left: 710vw;
+    left: 705vw;
     background-image: url(images/DesignLijst.png);
     background-size: calc(91px * var(--talenLijst-size)) calc(40px * var(--talenLijst-size));
 }
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// Projects*/
+.textProjects{
+    position: absolute;
+    width: calc(150px * var(--skills-size));
+    height: calc(21px * var(--skills-size));
+    top: 150px;
+    left: 790vw;
+    background-image: url(images/projectsText.png);
+    background-size: calc(150px * var(--skills-size)) calc(21px * var(--skills-size));
+    z-index: 7;
+}
+.project{
+    position: absolute;
+    width: calc(100px * var(--projectSign-size));
+    height: calc(100px * var(--projectSign-size));
+    top: 0;
+    background-image: url(images/projectSign.png);
+    background-size: calc(100px * var(--projectSign-size)) calc(100px * var(--projectSign-size));
+}
+.projectEen{
+    left: 850vw;
+}
+.projectTwee{
+    left: 900vw;
+}
+.projectDrie{
+    left: 950vw;
+}
+.projectVier{
+    left: 1000vw;
+}
+.projectFrame{
+    margin: 250px 4%;
+    height: 55%;
+    width: 90%;
+    /* background-color: #7c4931; */
+}
+@font-face {
+    font-family: font;
+    src: url(fonts/LemonMilkLightItalic-7BjPE.otf);
+}
+.projectFrame > p{
+    margin: 0 40px;
+    font-size: 20px;
+    font-family: font;
+}
+.projectFrame > img{
+    image-rendering: auto;
+    border: 5px solid;
+    position: relative;
+    width: 60%;
+    margin: 20px 40px;
+    font-size: 20px;
+    font-family: font;
+}
+.projectFrame > div{
+    position: absolute;
+    right: 70px;
+    margin: -60px 0;
+    background-color: #583423;
+    border: 2px solid #31190e;
+    padding: 5px;
+    box-shadow: 5px 5px 0px 0px  #422619;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: font;
+}
+a:hover{
+    cursor: pointer;
+}
+.titel{
+    font-family: font;
+    position: relative;
+    top: 30px;
+    text-align: center;
+    font-size: 40px;
+}
+
 
 /* ///////////////////////////////////////////////////////////////// Portals */
 .portal1{
@@ -366,6 +462,16 @@ body {
     background-repeat: no-repeat;
     bottom: 170px;
     left: 420vw;
+}
+.portal3{
+    position: absolute;
+    width: calc(26px * var(--portal-size));
+    height: calc(40px * var(--portal-size));
+    background-image: url(images/portalProjects.png);
+    background-size: calc(26px * var(--portal-size)) calc(40px * var(--portal-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 770vw;
 }
 
 
@@ -423,14 +529,57 @@ body {
 /* factory */
 .factory1{
     position: absolute;
-    left: 380vw;
+    left: 450vw;
     bottom: 170px;
     width: calc(115px * var(--factory-size));
     height: calc(93px * var(--factory-size));
     background-image: url(images/factory.png);
     background-size: calc(115px * var(--factory-size)) calc(93px * var(--factory-size));
 }
+.palmTree{
+    position: absolute;
+    left: 400vw;
+    bottom: 170px;
+    width: calc(32px * var(--palmTree-size));
+    height: calc(49px * var(--palmTree-size));
+    background-image: url(images/palmTree.png);
+    background-size: calc(32px * var(--palmTree-size)) calc(49px * var(--palmTree-size));
+}
 
+/* BACKGORUND 2 //////////////////////////////////////////////////////////////////////////////////////////////// */
+.background2 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 6;
+}
+.factoryTruck{
+    position: absolute;
+    left: 415vw;
+    bottom: 170px;
+    width: calc(40px * var(--truck-size));
+    height: calc(26px * var(--truck-size));
+    background-image: url(images/factoryTruck.png);
+    background-size: calc(40px * var(--truck-size)) calc(26px * var(--truck-size));
+}
+.factoryCar{
+    position: absolute;
+    left: 500vw;
+    bottom: 170px;
+    width: calc(15px * var(--truck-size));
+    height: calc(7px * var(--truck-size));
+    background-image: url(images/car.png);
+    background-size: calc(15px * var(--truck-size)) calc(7px * var(--truck-size));
+}
+.factoryTruck2{
+    position: absolute;
+    left: 600vw;
+    bottom: 170px;
+    width: calc(40px * var(--truck-size));
+    height: calc(26px * var(--truck-size));
+    background-image: url(images/factoryTruck.png);
+    background-size: calc(40px * var(--truck-size)) calc(26px * var(--truck-size));
+}
 /* ////////////////////////////////////////////////////////////// WOLKEN LAYER */
 
 

@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RUSSELL WINCKERS</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,7 +17,7 @@
     <div id="welcomeText"></div>
 
     <div id="character">
-        <img id="character_spritesheet" class="face-right"src="../images/animatedCharater.png" alt="character">
+        <img id="character_spritesheet" class="face-right" src="../images/animatedCharater.png" alt="character">
     </div>
     <div id="outer-container">
         <div id="container">
@@ -25,6 +27,7 @@
                 <div class="grond1"></div>
                 <div class="grond2"></div>
                 <div class="grond3"></div>
+                <div class="grond4"></div>
                 <!-- Boomen en bosjes-->
                 <div class="bosGroen bosEen"></div>
                 <div class="boomGroen boomEen"></div>
@@ -49,12 +52,34 @@
                 <!-- Level 2(Skills) ///////////////////////////////////////////////////////////////////////-->
                 <div class="portal2"></div>
                 <div class="textSkills"></div>
-                <div class="skillsBoom"></div>
                 <div class="languageSign"></div>
                 <div class="talenLijst"></div>
                 <div class="designText"></div>
                 <div class="designLijst"></div>
 
+                <!-- Level 3(Projects) ///////////////////////////////////////////////////////////////////////-->
+                <div class="portal3"></div>
+                <div class="textProjects"></div>
+                <div class="project projectEen">
+                    <div class="projectFrame">
+                        <h1 class="titel">Interactieve Map</h1><br><br>
+                        <p>Made using: HTML, CSS, Javascript<br>
+                        Made By: Russell</p>
+                        <img src="./projectImages/interactieveMap.png" alt="interactieveMap">
+                        <div><a href="https://87973.stu.sd-lab.nl/minor2/interactieve_map/html/" target="_blank">Take A Look</a></div>
+                    </div>
+                </div>
+                <div class="project projectTwee">
+                    <div class="projectFrame">
+                        <h1 class="titel">Candy Shop</h1><br><br>
+                        <p>Made using: HTML, CSS, Javascript, PHP, MySql<br>
+                        Made By: Russell, Tijn</p>
+                        <img src="./projectImages/deSnoepKoning.png" alt="De snoepKoning">
+                        <div><a href="https://87973.stu.sd-lab.nl/beroeps2/snoepkoning/SnoepkoningD/homepage.html" target="_blank">Take A Look</a></div>
+                    </div>
+                </div>
+                <div class="project projectDrie"></div>
+                <div class="project projectVier"></div>
             </div>
 
             <!-- Parallax effect -->
@@ -66,8 +91,14 @@
                     <div class="mountainEen"></div>
                     <div class="mountainTwee"></div>
                     <div class="factory1"></div>
+                    <div class="palmTree"></div>
 
 
+                </div>
+                <div class="layer background2">
+                    <div class="factoryTruck"></div>
+                    <div class="factoryCar"></div>
+                    <div class="factoryTruck2"></div>
                 </div>
                 <!-- Wolken -->
                 <div class="layer wolken">

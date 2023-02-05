@@ -9,7 +9,8 @@ cont.onscroll = function(){
     let X = cont.scrollTop;
 
     layer[0].style.left = X/4 + "px";
-    layer[1].style.left = X/1.5 + "px";
+    layer[1].style.left = X/8 + "px";
+    layer[2].style.left = X/1.5 + "px";
 
 
 // //////////////////////////////////////////////////////////////////////// player movement
@@ -19,7 +20,7 @@ userHasScrolled = true;
                 document.getElementById("character_spritesheet").style.animation = "none";
                     }, 500); 
                 {
-                document.getElementById("character_spritesheet").style.animation = "moveSpritesheet 0.4s steps(2) infinite";
+                document.getElementById("character_spritesheet").style.animation = "moveSpritesheet 0.5s steps(2) infinite";
                 }};
 
 
