@@ -20,14 +20,6 @@ userHasScrolled = true;
                     }, 500); 
                 {
                 document.getElementById("character_spritesheet").style.animation = "moveSpritesheet 0.4s steps(2) infinite";
-
-let oldScrollY = cont.scrollY;
-if(oldScrollY < cont.scrollY){
-console.log("down");
-}else{
-    console.log("up");
-}                
-oldScrollY = cont.scrollY;
                 }};
 
 

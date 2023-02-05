@@ -43,8 +43,11 @@ body {
 
 /* Player */
 :root {
+    --factory-size: 10;
     --backgroundTowers-size: 7;
-    --background-width: 400vw;
+    --purpleTower-size: 0;
+    --mountain-size: 9;
+    --background-width: 900vw;
     --player-size: 8;
     --name-size: 6;
     --aboutme-size: 6;
@@ -54,6 +57,15 @@ body {
     --balon-size:  5;
     --skateLoop-size: 8;
     --billBoard-size: 7;
+    --foodStand-size: 7;
+    --favFood-size: 8;
+
+    --directionSign-size: 7;
+    /* skills */
+    --skills-size: 6;
+    --woodenSign2-size: 8;
+    --talenLijst-size: 8;
+    
 }
 
 #character {
@@ -115,12 +127,28 @@ body {
     z-index: 10;
 }
 
-.grond {
+.grond1 {
     position: absolute;
-    width: var(--background-width);
+    width: 135vw;
     height: 170px;
     bottom: 0;
     background-image: url(images/gras.png);
+}
+.grond2{
+    position: absolute;
+    width: 290vw;
+    height: 170px;
+    bottom: 0;
+    left: 135vw;
+    background-image: url(images/purpleGras.png);
+}
+.grond3{
+    position: absolute;
+    width: 400vw;
+    height: 170px;
+    bottom: 0;
+    left: 425vw;
+    background-image: url(images/streetGround.png);
 }
 /* ///////////////////////////////////////////////////////////////////////////////////// BOOM en BOS*/
 .boomGroen{
@@ -220,27 +248,103 @@ body {
     background-image: url(images/skateBillBoard.png);
     background-size: calc(51px * var(--billBoard-size)) calc(71px * var(--billBoard-size));
 }
-.purpleTower{
+/* ///////////// Food */
+.foodText{
     position: absolute;
-    width: 200px;
-    height: 800px;
-    bottom: 170px;
-    background-color: gray;
-    left: 280vw;
-
+    width: calc(87px * var(--favFood-size));
+    height: calc(34px * var(--favFood-size));
+    top: 0;
+    left: 325vw;
+    background-image: url(images/woodenSign.png);
+    background-size: calc(87px * var(--favFood-size)) calc(34px * var(--favFood-size));
 }
-/* ///////////// GLR */
-.GLR{
+.sushiStand{
     position: absolute;
-    width: 600px;
-    height: 300px;
+    width: calc(80px * var(--foodStand-size));
+    height: calc(60px * var(--foodStand-size));
     bottom: 170px;
-    left: 320vw;
-    background-color: rgb(255, 230, 8);
+    left: 310vw;
+    background-image: url(images/sushiStand.png);
+    background-size: calc(80px * var(--foodStand-size)) calc(60px * var(--foodStand-size));
+}
+.tacoStand{
+    position: absolute;
+    width: calc(80px * var(--foodStand-size));
+    height: calc(60px * var(--foodStand-size));
+    bottom: 170px;
+    left: 350vw;
+    background-image: url(images/tacoTruck.png);
+    background-size: calc(80px * var(--foodStand-size)) calc(60px * var(--foodStand-size));
 }
 
 
+/* ///////////////////////////////////////////////////////////////////////////////////// SKILLS */
+.directionSign{
+    position: absolute;
+    width: calc(28px * var(--directionSign-size));
+    height: calc(39px * var(--directionSign-size));
+    bottom: 170px;
+    left: 395vw;
+    background-image: url(images/directionSign.png);
+    background-size: calc(28px * var(--directionSign-size)) calc(39px * var(--directionSign-size));
+}
 
+.textSkills{
+    position: absolute;
+    width: calc(101px * var(--skills-size));
+    height: calc(21px * var(--skills-size));
+    top: 150px;
+    left: 440vw;
+    background-image: url(images/skillsText.png);
+    background-size: calc(101px * var(--skills-size)) calc(21px * var(--skills-size));
+    z-index: 7;
+}
+.skillsBoom{
+    position: absolute;
+    background-image: url(images/skillsBoom.png);
+    width: calc(30px * var(--boom-size));
+    height: calc(52px * var(--boom-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 455vw;
+    background-size: calc(30px * var(--boom-size)) calc(52px * var(--boom-size));
+}
+.languageSign{
+    position: absolute;
+    width: calc(65px * var(--woodenSign2-size));
+    height: calc(60px * var(--woodenSign2-size));
+    top: 0;
+    left: 480vw;
+    background-image: url(images/woodenSignLanguage.png);
+    background-size: calc(65px * var(--woodenSign2-size)) calc(60px * var(--woodenSign2-size));
+}
+.talenLijst{
+    position: absolute;
+    width: calc(292px * var(--talenLijst-size));
+    height: calc(43px * var(--talenLijst-size));
+    bottom: 300px;
+    left: 530vw;
+    background-image: url(images/TalenLijst.png);
+    background-size: calc(292px * var(--talenLijst-size)) calc(43px * var(--talenLijst-size));
+}
+.designText{
+    position: absolute;
+    width: calc(43px * var(--woodenSign2-size));
+    height: calc(68px * var(--woodenSign2-size));
+    top: 0;
+    left: 670vw;
+    background-image: url(images/designSign.png);
+    background-size: calc(43px * var(--woodenSign2-size)) calc(68px * var(--woodenSign2-size));
+}
+.designLijst{
+    position: absolute;
+    width: calc(91px * var(--talenLijst-size));
+    height: calc(40px * var(--talenLijst-size));
+    bottom: 300px;
+    left: 710vw;
+    background-image: url(images/DesignLijst.png);
+    background-size: calc(91px * var(--talenLijst-size)) calc(40px * var(--talenLijst-size));
+}
 
 /* ///////////////////////////////////////////////////////////////// Portals */
 .portal1{
@@ -252,6 +356,16 @@ body {
     background-repeat: no-repeat;
     bottom: 170px;
     left: 130vw;
+}
+.portal2{
+    position: absolute;
+    width: calc(26px * var(--portal-size));
+    height: calc(40px * var(--portal-size));
+    background-image: url(images/greenPortal.png);
+    background-size: calc(26px * var(--portal-size)) calc(40px * var(--portal-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 420vw;
 }
 
 
@@ -275,6 +389,27 @@ body {
     background-size: calc(20px * var(--balon-size)) calc(34px * var(--balon-size));
 }
 
+/* mountains */
+.mountainEen{
+    position: absolute;
+    left: 90vw;
+    bottom: 170px;
+    width: calc(140px * var(--mountain-size));
+    height: calc(66px * var(--mountain-size));
+    background-image: url(images/mountainBig.png);
+    background-repeat: no-repeat;
+    background-size: calc(140px * var(--mountain-size)) calc(66px * var(--mountain-size));
+}
+.mountainTwee{
+    position: absolute;
+    left: 230vw;
+    bottom: 170px;
+    width: calc(140px * var(--mountain-size));
+    height: calc(66px * var(--mountain-size));
+    background-image: url(images/mountian.png);
+    background-repeat: no-repeat;
+    background-size: calc(140px * var(--mountain-size)) calc(66px * var(--mountain-size));
+}
 /* backgroundTowers */
 .towersGem {
     position: absolute;
@@ -284,6 +419,16 @@ body {
     height: calc(83px * var(--backgroundTowers-size));
     background-image: url(images/gemBackground.png);
     background-size: calc(62px * var(--backgroundTowers-size)) calc(83px * var(--backgroundTowers-size));
+}
+/* factory */
+.factory1{
+    position: absolute;
+    left: 380vw;
+    bottom: 170px;
+    width: calc(115px * var(--factory-size));
+    height: calc(93px * var(--factory-size));
+    background-image: url(images/factory.png);
+    background-size: calc(115px * var(--factory-size)) calc(93px * var(--factory-size));
 }
 
 /* ////////////////////////////////////////////////////////////// WOLKEN LAYER */
@@ -313,4 +458,16 @@ body {
 .drie{
     top: 150px;
     left: 130vw;
+}
+.vier{
+    top: 200px;
+    left: 200vw;
+}
+.vijf{
+    top: 100px;
+    left: 240vw;
+}
+.zes{
+    top: 230px;
+    left: 300vw;
 }
