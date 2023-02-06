@@ -1,5 +1,6 @@
 * {
     image-rendering: pixelated;
+    cursor: url(images/sushiCursor.png),auto;
 }
 
 body {
