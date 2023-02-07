@@ -47,7 +47,7 @@ body {
     --backgroundTowers-size: 7;
     --purpleTower-size: 0;
     --mountain-size: 9;
-    --background-width: 1200vw;
+    --background-width: 1237vw;
     --player-size: 8;
     --name-size: 6;
     --aboutme-size: 6;
@@ -72,6 +72,12 @@ body {
 
     /* Projects */
     --projectSign-size: 7;
+    --iceMountainEen-size: 7;
+    --igloo-size: 6;
+
+    /* contact */
+    --desertMountain-size: 9;
+    --finish-size: 6;
 }
 
 #character {
@@ -158,12 +164,21 @@ body {
 }
 .grond4{
     position: absolute;
-    width: 350vw;
+    width: 300vw;
     height: 170px;
     bottom: 0;
     left: 777vw;
     background-image: url(images/iceGrond.png);
 }
+.grond5{
+    position: absolute;
+    width: 160vw;
+    height: 170px;
+    bottom: 0;
+    left: 1077vw;
+    background-image: url(images/sand.png);
+}
+
 /* ///////////////////////////////////////////////////////////////////////////////////// BOOM en BOS*/
 .boomGroen{
     position: absolute;
@@ -443,6 +458,83 @@ a:hover{
 }
 
 
+/* Level 4 (Contact) */
+.contactText{
+    position: absolute;
+    width: calc(131px * var(--skills-size));
+    height: calc(44px * var(--skills-size));
+    top: 150px;
+    left: 1100vw;
+    background-image: url(images/contactMe.png);
+    background-size: calc(131px * var(--skills-size)) calc(44px * var(--skills-size));
+    z-index: 7;
+}
+.finish{
+    position: absolute;
+    width: calc(42px * var(--finish-size));
+    height: calc(54px * var(--finish-size));
+    bottom: 170px;
+    left: 1140vw;
+    background-image: url(images/finishFlag.png);
+    background-size: calc(42px * var(--finish-size)) calc(54px * var(--finish-size));
+}
+.cactus{
+    position: absolute;
+    width: calc(26px * var(--finish-size));
+    height: calc(37px * var(--finish-size));
+    bottom: 170px;
+    left: 1110vw;
+    background-image: url(images/cactus.png);
+    background-size: calc(26px * var(--finish-size)) calc(37px * var(--finish-size));
+}
+.contact{
+    position: absolute;
+    width: calc(100px * var(--projectSign-size));
+    height: calc(100px * var(--projectSign-size));
+    top: 0;
+    left: 1190vw;
+
+    background-image: url(images/contactSign.png);
+    background-size: calc(100px * var(--projectSign-size)) calc(100px * var(--projectSign-size));
+
+    /* Form styling */
+    font-family: font;
+    text-align: center;
+}
+.contactForm{
+    width: 80%;
+    margin: 35% auto;
+}
+.contactForm > div > h1{
+    font-size: 25px;
+    padding: 0 !important;
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+.contactForm > div{
+    padding: 5px;
+    text-align: left;
+}
+.contactForm > div > input, textarea{
+    position: relative;
+    width: 100%;
+    background-color: #814a31;
+    box-shadow: 5px 5px 0px 0px  #422619;
+    border: 3px solid #31190e !important;    
+    height: 30px;
+    border: none;
+    font-family: font;
+}
+.message{
+    height: 100px !important;
+}
+.contactForm > div > input:hover{
+    cursor: pointer;
+}
+.submitContact{
+    margin: 30px auto !important;
+}
+
 /* ///////////////////////////////////////////////////////////////// Portals */
 .portal1{
     position: absolute;
@@ -473,6 +565,16 @@ a:hover{
     background-repeat: no-repeat;
     bottom: 170px;
     left: 770vw;
+}
+.portal4{
+    position: absolute;
+    width: calc(26px * var(--portal-size));
+    height: calc(40px * var(--portal-size));
+    background-image: url(images/redPortal.png);
+    background-size: calc(26px * var(--portal-size)) calc(40px * var(--portal-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 1070vw;
 }
 
 
@@ -545,6 +647,49 @@ a:hover{
     height: calc(49px * var(--palmTree-size));
     background-image: url(images/palmTree.png);
     background-size: calc(32px * var(--palmTree-size)) calc(49px * var(--palmTree-size));
+}
+
+
+/* Ice mountians */
+
+.igloo{
+    position: absolute;
+    left: 610vw;
+    bottom: 170px;
+    width: calc(86px * var(--igloo-size));
+    height: calc(47px * var(--igloo-size));
+    background-image: url(images/igloo.png);
+    background-size: calc(86px * var(--igloo-size)) calc(47px * var(--igloo-size));
+}
+.iceMountainEen{
+    position: absolute;
+    left: 680vw;
+    bottom: 170px;
+    width: calc(118px * var(--iceMountainEen-size));
+    height: calc(100px * var(--iceMountainEen-size));
+    background-image: url(images/iceMountain1.png);
+    background-size: calc(118px * var(--iceMountainEen-size)) calc(100px * var(--iceMountainEen-size));
+}
+.iceMountainTwee{
+    position: absolute;
+    left: 760vw;
+    bottom: 170px;
+    width: calc(138px * var(--iceMountainEen-size));
+    height: calc(65px * var(--iceMountainEen-size));
+    background-image: url(images/iceMountain2.png);
+    background-size: calc(138px * var(--iceMountainEen-size)) calc(65px * var(--iceMountainEen-size));
+}
+
+
+/* DesertMountain */
+.desertMountain{
+    position: absolute;
+    left: 830vw;
+    bottom: 170px;
+    width: calc(233px * var(--desertMountain-size));
+    height: calc(65px * var(--desertMountain-size));
+    background-image: url(images/desertMountain.png);
+    background-size: calc(233px * var(--desertMountain-size)) calc(65px * var(--desertMountain-size));
 }
 
 /* BACKGORUND 2 //////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -620,4 +765,16 @@ a:hover{
 .zes{
     top: 230px;
     left: 300vw;
+}
+.zeven{
+    top: 150px;
+    left: 350vw;
+}
+.acht{
+    top: 300px;
+    left: 400vw;
+}
+.negen{
+    top: 150px;
+    left: 460vw;
 }
