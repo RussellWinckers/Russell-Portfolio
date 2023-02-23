@@ -1,6 +1,6 @@
 * {
     image-rendering: pixelated;
-    cursor: cell;
+    cursor: url(images/sushiCursor.png),auto;
 }
 
 body {
@@ -43,8 +43,11 @@ body {
 
 /* Player */
 :root {
+    
     --backgroundTowers-size: 7;
-    --background-width: 400vw;
+    --purpleTower-size: 0;
+    --mountain-size: 9;
+    --background-width: 1237vw;
     --player-size: 8;
     --name-size: 6;
     --aboutme-size: 6;
@@ -54,6 +57,27 @@ body {
     --balon-size:  5;
     --skateLoop-size: 8;
     --billBoard-size: 7;
+    --foodStand-size: 7;
+    --favFood-size: 8;
+
+    --directionSign-size: 7;
+    /* skills */
+    --skills-size: 6;
+    --woodenSign2-size: 8;
+    --talenLijst-size: 8;
+    --palmTree-size: 9; 
+    --truck-size: 15;
+    --factory-size: 10;
+    
+
+    /* Projects */
+    --projectSign-size: 7;
+    --iceMountainEen-size: 7;
+    --igloo-size: 6;
+
+    /* contact */
+    --desertMountain-size: 9;
+    --finish-size: 6;
 }
 
 #character {
@@ -115,13 +139,46 @@ body {
     z-index: 10;
 }
 
-.grond {
+.grond1 {
     position: absolute;
-    width: var(--background-width);
+    width: 137vw;
     height: 170px;
     bottom: 0;
     background-image: url(images/gras.png);
 }
+.grond2{
+    position: absolute;
+    width: 290vw;
+    height: 170px;
+    bottom: 0;
+    left: 137vw;
+    background-image: url(images/purpleGras.png);
+}
+.grond3{
+    position: absolute;
+    width: 350vw;
+    height: 170px;
+    bottom: 0;
+    left: 427vw;
+    background-image: url(images/streetGround.png);
+}
+.grond4{
+    position: absolute;
+    width: 300vw;
+    height: 170px;
+    bottom: 0;
+    left: 777vw;
+    background-image: url(images/iceGrond.png);
+}
+.grond5{
+    position: absolute;
+    width: 160vw;
+    height: 170px;
+    bottom: 0;
+    left: 1077vw;
+    background-image: url(images/sand.png);
+}
+
 /* ///////////////////////////////////////////////////////////////////////////////////// BOOM en BOS*/
 .boomGroen{
     position: absolute;
@@ -220,27 +277,263 @@ body {
     background-image: url(images/skateBillBoard.png);
     background-size: calc(51px * var(--billBoard-size)) calc(71px * var(--billBoard-size));
 }
-.purpleTower{
+/* ///////////// Food */
+.foodText{
     position: absolute;
-    width: 200px;
-    height: 800px;
+    width: calc(87px * var(--favFood-size));
+    height: calc(34px * var(--favFood-size));
+    top: 0;
+    left: 325vw;
+    background-image: url(images/woodenSign.png);
+    background-size: calc(87px * var(--favFood-size)) calc(34px * var(--favFood-size));
+}
+.sushiStand{
+    position: absolute;
+    width: calc(80px * var(--foodStand-size));
+    height: calc(60px * var(--foodStand-size));
     bottom: 170px;
-    background-color: gray;
-    left: 280vw;
+    left: 310vw;
+    background-image: url(images/sushiStand.png);
+    background-size: calc(80px * var(--foodStand-size)) calc(60px * var(--foodStand-size));
+}
+.tacoStand{
+    position: absolute;
+    width: calc(80px * var(--foodStand-size));
+    height: calc(60px * var(--foodStand-size));
+    bottom: 170px;
+    left: 350vw;
+    background-image: url(images/tacoTruck.png);
+    background-size: calc(80px * var(--foodStand-size)) calc(60px * var(--foodStand-size));
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// SKILLS */
+.directionSign{
+    position: absolute;
+    width: calc(28px * var(--directionSign-size));
+    height: calc(39px * var(--directionSign-size));
+    bottom: 170px;
+    left: 395vw;
+    background-image: url(images/directionSign.png);
+    background-size: calc(28px * var(--directionSign-size)) calc(39px * var(--directionSign-size));
+}
+
+.textSkills{
+    position: absolute;
+    width: calc(101px * var(--skills-size));
+    height: calc(21px * var(--skills-size));
+    top: 150px;
+    left: 440vw;
+    background-image: url(images/skillsText.png);
+    background-size: calc(101px * var(--skills-size)) calc(21px * var(--skills-size));
+    z-index: 7;
+}
+.skillsBoom{
+    position: absolute;
+    background-image: url(images/skillsBoom.png);
+    width: calc(30px * var(--boom-size));
+    height: calc(52px * var(--boom-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 455vw;
+    background-size: calc(30px * var(--boom-size)) calc(52px * var(--boom-size));
+}
+.languageSign{
+    position: absolute;
+    width: calc(65px * var(--woodenSign2-size));
+    height: calc(60px * var(--woodenSign2-size));
+    top: 0;
+    left: 480vw;
+    background-image: url(images/woodenSignLanguage.png);
+    background-size: calc(65px * var(--woodenSign2-size)) calc(60px * var(--woodenSign2-size));
+}
+.talenLijst{
+    position: absolute;
+    width: calc(292px * var(--talenLijst-size));
+    height: calc(43px * var(--talenLijst-size));
+    bottom: 300px;
+    left: 530vw;
+    background-image: url(images/TalenLijst.png);
+    background-size: calc(292px * var(--talenLijst-size)) calc(43px * var(--talenLijst-size));
+}
+.designText{
+    position: absolute;
+    width: calc(43px * var(--woodenSign2-size));
+    height: calc(68px * var(--woodenSign2-size));
+    top: 0;
+    left: 670vw;
+    background-image: url(images/designSign.png);
+    background-size: calc(43px * var(--woodenSign2-size)) calc(68px * var(--woodenSign2-size));
+}
+.designLijst{
+    position: absolute;
+    width: calc(91px * var(--talenLijst-size));
+    height: calc(40px * var(--talenLijst-size));
+    bottom: 300px;
+    left: 705vw;
+    background-image: url(images/DesignLijst.png);
+    background-size: calc(91px * var(--talenLijst-size)) calc(40px * var(--talenLijst-size));
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// Projects*/
+.textProjects{
+    position: absolute;
+    width: calc(150px * var(--skills-size));
+    height: calc(21px * var(--skills-size));
+    top: 150px;
+    left: 790vw;
+    background-image: url(images/projectsText.png);
+    background-size: calc(150px * var(--skills-size)) calc(21px * var(--skills-size));
+    z-index: 7;
+}
+.project{
+    position: absolute;
+    width: calc(100px * var(--projectSign-size));
+    height: calc(100px * var(--projectSign-size));
+    top: 0;
+    background-image: url(images/projectSign.png);
+    background-size: calc(100px * var(--projectSign-size)) calc(100px * var(--projectSign-size));
+}
+.projectEen{
+    left: 850vw;
+}
+.projectTwee{
+    left: 900vw;
+}
+.projectDrie{
+    left: 950vw;
+}
+.projectVier{
+    left: 1000vw;
+}
+.projectFrame{
+    margin: 250px 4%;
+    height: 55%;
+    width: 90%;
+    /* background-color: #7c4931; */
+}
+@font-face {
+    font-family: font;
+    src: url(fonts/LemonMilkLightItalic-7BjPE.otf);
+}
+.projectFrame > p{
+    margin: 0 40px;
+    font-size: 20px;
+    font-family: font;
+}
+.projectFrame > img{
+    image-rendering: auto;
+    border: 5px solid;
+    position: relative;
+    width: 60%;
+    margin: 20px 40px;
+    font-size: 20px;
+    font-family: font;
+}
+.projectFrame > div{
+    position: absolute;
+    right: 70px;
+    margin: -60px 0;
+    background-color: #583423;
+    border: 2px solid #31190e;
+    padding: 5px;
+    box-shadow: 5px 5px 0px 0px  #422619;
 
 }
-/* ///////////// GLR */
-.GLR{
-    position: absolute;
-    width: 600px;
-    height: 300px;
-    bottom: 170px;
-    left: 320vw;
-    background-color: rgb(255, 230, 8);
+a{
+    text-decoration: none;
+    color: white;
+    font-family: font;
+}
+a:hover{
+    cursor: pointer;
+}
+.titel{
+    font-family: font;
+    position: relative;
+    top: 30px;
+    text-align: center;
+    font-size: 40px;
 }
 
 
+/* Level 4 (Contact) */
+.contactText{
+    position: absolute;
+    width: calc(131px * var(--skills-size));
+    height: calc(44px * var(--skills-size));
+    top: 150px;
+    left: 1100vw;
+    background-image: url(images/contactMe.png);
+    background-size: calc(131px * var(--skills-size)) calc(44px * var(--skills-size));
+    z-index: 7;
+}
+.finish{
+    position: absolute;
+    width: calc(42px * var(--finish-size));
+    height: calc(54px * var(--finish-size));
+    bottom: 170px;
+    left: 1140vw;
+    background-image: url(images/finishFlag.png);
+    background-size: calc(42px * var(--finish-size)) calc(54px * var(--finish-size));
+}
+.cactus{
+    position: absolute;
+    width: calc(26px * var(--finish-size));
+    height: calc(37px * var(--finish-size));
+    bottom: 170px;
+    left: 1110vw;
+    background-image: url(images/cactus.png);
+    background-size: calc(26px * var(--finish-size)) calc(37px * var(--finish-size));
+}
+.contact{
+    position: absolute;
+    width: calc(100px * var(--projectSign-size));
+    height: calc(100px * var(--projectSign-size));
+    top: 0;
+    left: 1190vw;
 
+    background-image: url(images/contactSign.png);
+    background-size: calc(100px * var(--projectSign-size)) calc(100px * var(--projectSign-size));
+
+    /* Form styling */
+    font-family: font;
+    text-align: center;
+}
+.contactForm{
+    width: 80%;
+    margin: 35% auto;
+}
+.contactForm > div > h1{
+    font-size: 25px;
+    padding: 0 !important;
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+.contactForm > div{
+    padding: 5px;
+    text-align: left;
+}
+.contactForm > div > input, textarea{
+    position: relative;
+    width: 100%;
+    background-color: #814a31;
+    box-shadow: 5px 5px 0px 0px  #422619;
+    border: 3px solid #31190e !important;    
+    height: 30px;
+    border: none;
+    font-family: font;
+}
+.message{
+    height: 100px !important;
+}
+.contactForm > div > input:hover{
+    cursor: pointer;
+}
+.submitContact{
+    margin: 30px auto !important;
+}
 
 /* ///////////////////////////////////////////////////////////////// Portals */
 .portal1{
@@ -252,6 +545,36 @@ body {
     background-repeat: no-repeat;
     bottom: 170px;
     left: 130vw;
+}
+.portal2{
+    position: absolute;
+    width: calc(26px * var(--portal-size));
+    height: calc(40px * var(--portal-size));
+    background-image: url(images/greenPortal.png);
+    background-size: calc(26px * var(--portal-size)) calc(40px * var(--portal-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 420vw;
+}
+.portal3{
+    position: absolute;
+    width: calc(26px * var(--portal-size));
+    height: calc(40px * var(--portal-size));
+    background-image: url(images/portalProjects.png);
+    background-size: calc(26px * var(--portal-size)) calc(40px * var(--portal-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 770vw;
+}
+.portal4{
+    position: absolute;
+    width: calc(26px * var(--portal-size));
+    height: calc(40px * var(--portal-size));
+    background-image: url(images/redPortal.png);
+    background-size: calc(26px * var(--portal-size)) calc(40px * var(--portal-size));
+    background-repeat: no-repeat;
+    bottom: 170px;
+    left: 1070vw;
 }
 
 
@@ -275,6 +598,27 @@ body {
     background-size: calc(20px * var(--balon-size)) calc(34px * var(--balon-size));
 }
 
+/* mountains */
+.mountainEen{
+    position: absolute;
+    left: 90vw;
+    bottom: 170px;
+    width: calc(140px * var(--mountain-size));
+    height: calc(66px * var(--mountain-size));
+    background-image: url(images/mountainBig.png);
+    background-repeat: no-repeat;
+    background-size: calc(140px * var(--mountain-size)) calc(66px * var(--mountain-size));
+}
+.mountainTwee{
+    position: absolute;
+    left: 230vw;
+    bottom: 170px;
+    width: calc(140px * var(--mountain-size));
+    height: calc(66px * var(--mountain-size));
+    background-image: url(images/mountian.png);
+    background-repeat: no-repeat;
+    background-size: calc(140px * var(--mountain-size)) calc(66px * var(--mountain-size));
+}
 /* backgroundTowers */
 .towersGem {
     position: absolute;
@@ -285,7 +629,103 @@ body {
     background-image: url(images/gemBackground.png);
     background-size: calc(62px * var(--backgroundTowers-size)) calc(83px * var(--backgroundTowers-size));
 }
+/* factory */
+.factory1{
+    position: absolute;
+    left: 450vw;
+    bottom: 170px;
+    width: calc(115px * var(--factory-size));
+    height: calc(93px * var(--factory-size));
+    background-image: url(images/factory.png);
+    background-size: calc(115px * var(--factory-size)) calc(93px * var(--factory-size));
+}
+.palmTree{
+    position: absolute;
+    left: 400vw;
+    bottom: 170px;
+    width: calc(32px * var(--palmTree-size));
+    height: calc(49px * var(--palmTree-size));
+    background-image: url(images/palmTree.png);
+    background-size: calc(32px * var(--palmTree-size)) calc(49px * var(--palmTree-size));
+}
 
+
+/* Ice mountians */
+
+.igloo{
+    position: absolute;
+    left: 610vw;
+    bottom: 170px;
+    width: calc(86px * var(--igloo-size));
+    height: calc(47px * var(--igloo-size));
+    background-image: url(images/igloo.png);
+    background-size: calc(86px * var(--igloo-size)) calc(47px * var(--igloo-size));
+}
+.iceMountainEen{
+    position: absolute;
+    left: 680vw;
+    bottom: 170px;
+    width: calc(118px * var(--iceMountainEen-size));
+    height: calc(100px * var(--iceMountainEen-size));
+    background-image: url(images/iceMountain1.png);
+    background-size: calc(118px * var(--iceMountainEen-size)) calc(100px * var(--iceMountainEen-size));
+}
+.iceMountainTwee{
+    position: absolute;
+    left: 760vw;
+    bottom: 170px;
+    width: calc(138px * var(--iceMountainEen-size));
+    height: calc(65px * var(--iceMountainEen-size));
+    background-image: url(images/iceMountain2.png);
+    background-size: calc(138px * var(--iceMountainEen-size)) calc(65px * var(--iceMountainEen-size));
+}
+
+
+/* DesertMountain */
+.desertMountain{
+    position: absolute;
+    left: 830vw;
+    bottom: 170px;
+    width: calc(233px * var(--desertMountain-size));
+    height: calc(65px * var(--desertMountain-size));
+    background-image: url(images/desertMountain.png);
+    background-size: calc(233px * var(--desertMountain-size)) calc(65px * var(--desertMountain-size));
+}
+
+/* BACKGORUND 2 //////////////////////////////////////////////////////////////////////////////////////////////// */
+.background2 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 6;
+}
+.factoryTruck{
+    position: absolute;
+    left: 415vw;
+    bottom: 170px;
+    width: calc(40px * var(--truck-size));
+    height: calc(26px * var(--truck-size));
+    background-image: url(images/factoryTruck.png);
+    background-size: calc(40px * var(--truck-size)) calc(26px * var(--truck-size));
+}
+.factoryCar{
+    position: absolute;
+    left: 500vw;
+    bottom: 170px;
+    width: calc(15px * var(--truck-size));
+    height: calc(7px * var(--truck-size));
+    background-image: url(images/car.png);
+    background-size: calc(15px * var(--truck-size)) calc(7px * var(--truck-size));
+}
+.factoryTruck2{
+    position: absolute;
+    left: 600vw;
+    bottom: 170px;
+    width: calc(40px * var(--truck-size));
+    height: calc(26px * var(--truck-size));
+    background-image: url(images/factoryTruck.png);
+    background-size: calc(40px * var(--truck-size)) calc(26px * var(--truck-size));
+}
 /* ////////////////////////////////////////////////////////////// WOLKEN LAYER */
 
 
@@ -313,4 +753,28 @@ body {
 .drie{
     top: 150px;
     left: 130vw;
+}
+.vier{
+    top: 200px;
+    left: 200vw;
+}
+.vijf{
+    top: 100px;
+    left: 240vw;
+}
+.zes{
+    top: 230px;
+    left: 300vw;
+}
+.zeven{
+    top: 150px;
+    left: 350vw;
+}
+.acht{
+    top: 300px;
+    left: 400vw;
+}
+.negen{
+    top: 150px;
+    left: 460vw;
 }
